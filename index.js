@@ -28,6 +28,7 @@ const _itemsGraphCollection = "items_graph"
 const _shopCollection = "shopping"
 const _linksCollection = "links_fetch"
 const _paymentsCollection = "payments_stripe_paypal"
+const port = process.env._PORT || 8080
 
 var amazonLaptop = {}
 var amazonHotDeal = {}
@@ -72,10 +73,8 @@ app.use(
   })
 )
 
-const port = process.env._PORT || 8080
-
 app.listen(port, function () {
-  console.log(`My project P0 running at port ${port}`)
+  console.log(`My project Price Monitor running at port ${port}`)
 })
 
 ///////////////////////////////////// GET CATEGORIES INFORMATION  //////////////////////////////////
