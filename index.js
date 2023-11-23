@@ -75,7 +75,7 @@ app.use(
 
 app.listen(port, err => {
     if(err) throw err;
-    console.log("%c Server running", "color: green");
+    console.log(`%c Server running on port: ${port}`, "color: green");
 });
 
 
