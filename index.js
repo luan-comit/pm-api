@@ -28,7 +28,7 @@ const _itemsGraphCollection = "items_graph"
 const _shopCollection = "shopping"
 const _linksCollection = "links_fetch"
 const _paymentsCollection = "payments_stripe_paypal"
-const port = process.env._PORT || 8080
+const port = process.env._PORT || 3000
 
 var amazonLaptop = {}
 var amazonHotDeal = {}
