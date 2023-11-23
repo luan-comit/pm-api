@@ -73,9 +73,11 @@ app.use(
   })
 )
 
-app.listen(port, function () {
-  console.log(`My project Price Monitor running at port ${port}`)
-})
+app.listen(port, err => {
+    if(err) throw err;
+    console.log("%c Server running", "color: green");
+});
+
 
 ///////////////////////////////////// GET CATEGORIES INFORMATION  //////////////////////////////////
 function getCategories() {
