@@ -1,4 +1,3 @@
-const bodyParser = require("body-parser")
 const express = require("express")
 const puppeteer = require("puppeteer")
 const dotenv = require("dotenv")
@@ -20,6 +19,7 @@ const paypalSecret = process.env._PAYPAL_SECRET
 const MYDOMAIN = process.env._APP_DOMAIN
 const _stripeKey = process.env._STRIPE_KEY
 const stripe = require("stripe")(_stripeKey)
+const key = process.env._PASSWORD_KEY ;
 
 const _db = "myproject" // database of the project
 const _usersCollection = "users" // users collection
@@ -159,6 +159,7 @@ app.get("/register", function (req, res) {
 
 app.post("/register", function (req, res) {
   console.log(req.body.email)
+
   mongoClient.connect(
     _mongoUrl,
     { useNewUrlParser: true },
