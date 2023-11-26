@@ -3,18 +3,15 @@ block contents
         // Jumbotron
         .container 
             h3 My contact
-            div(class="contact-left")
-                p
-                    strong Luan Le
-                p Phone: (431) 275 9078
-                p Email: luanlvt@gmail.com
-                button(class="email-btn" type="email") Email Me
-            div(class="contact-right")
-                a(href="#", class="fa fa-facebook")
-                a(href="#", class="fa fa-twitter")
-                a(href="https://www.linkedin.com/in/luan-le-1b1a40220/",class="fa fa-linkedin")
-                a(href="#", class="fa fa-skype")
-            // Site footer
+            .jumbotron
+                a(href=`mailto:luanlvt@gmail.com`)
+                    button(class="email-btn" type="email") Email Me
+                .jumbotron
+                    a(href="#", class="fa fa-facebook")
+                    a(href="#", class="fa fa-twitter")
+                    a(href="https://www.linkedin.com/in/luan-le-1b1a40220/",class="fa fa-linkedin")
+                    a(href="#", class="fa fa-skype")
+        // Site footer
         .container 
             footer.footer
-                p © Price Monitor - A NodeJS Project of Luan Le - last updated Nov. 2023
+                p © Price Monitor - a NodeJS Project of Luan Le

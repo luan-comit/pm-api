@@ -6,19 +6,6 @@ block contents
 			br
 			p= message
 			br
-			br
-			if msgID == 0
-				a.btn.btn-lg.btn-success(href='/') Back
-			if msgID == 1
-				a.btn.btn-lg.btn-success(href='/fetch') Back
-			if msgID == 2
-				a.btn.btn-lg.btn-success(href='/monitor') Back
-			if msgID == 3
-				a.btn.btn-lg.btn-success(href='/manageshop') Back
-			if msgID == 51
-				a.btn.btn-lg.btn-success(href='/login') Back
-			if msgID == 52
-				a.btn.btn-lg.btn-success(href='/register') Back
-
+			a.btn.btn-link(onclick='window.history.back()') Go Back
 		footer.footer
-			p © Price Monitor - A NodeJS Project of Luan Le - last updated Nov. 2023
+			p © Price Monitor - a NodeJS Project of Luan Le

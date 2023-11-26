@@ -3,13 +3,13 @@ block contents
     // Jumbotron
     .container
         div
-            h4.form-signin-heading  Fetching Items
+            h3 Fetching Items
             div
                 form(class='inputstl form-horizontal', action='/fetch', method='POST')
                     div.form-group
                         label(class="col-sm-2 control-label", for='category') Chose a category: 
                         div.col-sm-4
-                            input(class="form-control inputstl", type='text' list='category' name='category')    
+                            input(class="form-control inputstl", type='text' list='category' name='category' placeholder='select one category from dropdown list')
                             datalist(id='category')
                                     option(value='Kijiji Classic Car')
                                     option(value='Kijiji Laptop')
@@ -40,11 +40,11 @@ block contents
                                 a(href= linkItem.link target='_blank')  Item number #{linkItem.pos} fetched
                                     p(style='font-size: x-small;') #{linkItem.link}
                 else 
-                    p No item to display
+                    p Items being fetched to display here
                 //a.btn.btn-lg.btn-success(href='#', role='button') Get started
             // Site footer
         footer.footer
-            p © Price Monitor - A NodeJS Project of Luan Le - last updated Nov. 2023
+            p © Price Monitor - a NodeJS Project of Luan Le
 
 
 

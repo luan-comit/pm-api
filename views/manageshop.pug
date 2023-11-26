@@ -3,18 +3,16 @@ include ./components/tables
 block contents  
     // Jumbotron
     .container
-        h3 Manage your shop     
-            a(href='./managebilling')
-                span    Billing
+        h3 Manage selling items on your shop
         //.jumbotron
         .table-responsive
-            table.table.table-striped
+            table.table-striped
                 thead
                     tr
                         th #
                         th.thumnail-tbl Image
-                        th Click to edit
-                        th Click to remove
+                        th Edit to sell
+                        th Remove from shop
                         th Description
                         th Selling Price 
                         th Original Price
@@ -38,4 +36,4 @@ block contents
                             td NO
     .container
         footer.footer
-            p © Price Monitor - A NodeJS Project of Luan Le - last updated Nov. 2023
+            p © Price Monitor - a NodeJS Project of Luan Le

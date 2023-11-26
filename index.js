@@ -151,7 +151,7 @@ app.get("/", function (req, res) {
 
 app.get("/register", function (req, res) {
   res.render("register", {
-    menu: 5,
+    menu: 6,
     logged: req.session.isAuth,
     email: req.session.email,
   })
@@ -177,7 +177,7 @@ app.post("/register", function (req, res) {
               res.render("message", {
                 msgID: 51,
                 message: `new email ${req.body.email} successfully added!`,
-                menu: 5,
+                menu: 6,
                 logged: req.session.isAuth,
                 email: req.session.email,
               })
@@ -194,7 +194,7 @@ app.post("/register", function (req, res) {
               res.render("message", {
                 msgID: 52,
                 message: "email existed, chose another email",
-                menu: 5,
+                menu: 6,
                 logged: req.session.isAuth,
                 email: req.session.email,
               })
@@ -208,7 +208,7 @@ app.post("/register", function (req, res) {
 
 app.get("/login", function (req, res) {
   res.render("login", {
-    menu: 5,
+    menu: 6,
     logged: req.session.isAuth,
     email: req.session.email,
   })
@@ -229,7 +229,7 @@ app.post("/login", function (req, res) {
             res.render("message", {
               msgID: 51,
               message: "username or password not matched",
-              menu: 5,
+              menu: 6,
               logged: req.session.isAuth,
               email: req.session.email,
             })
@@ -1039,7 +1039,7 @@ app.get("/deleteshopitem/:id", isAuth, function (req, res) {
 
 app.get("/contact", function (req, res) {
   res.render("contact", {
-    menu: 4,
+    menu: 5,
     logged: req.session.isAuth,
     email: req.session.email,
   })
@@ -1065,7 +1065,7 @@ app.get("/managebilling", isAuth, function (req, res) {
             db.close()
             if (!records || records == null || records.length === 0) {
               res.render("billing", {
-                menu: 3,
+                menu: 4,
                 listItems: false,
                 logged: req.session.isAuth,
                 email: req.session.email,
@@ -1075,7 +1075,7 @@ app.get("/managebilling", isAuth, function (req, res) {
                 record.pos = index
               })
               res.render("billing", {
-                menu: 3,
+                menu: 4,
                 listItems: records,
                 logged: req.session.isAuth,
                 email: req.session.email,

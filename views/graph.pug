@@ -1,12 +1,10 @@
 extends ./layout.pug
 block contents
-
     .container
-        br
-        br
-        h4
-            a(href= graphUrl, target='blank')= graphLabel
         .jumbotron
+            h4
+                a(href= graphUrl, target='blank')= graphLabel
+            br()
             script(src="https://cdn.jsdelivr.net/npm/chart.js", defer)
             script.
                 const graphLabel = !{JSON.stringify(graphLabel)};
@@ -16,12 +14,10 @@ block contents
             script(src="../js/graph.js", defer)
             div.graph-container
                 canvas.mygraph(id="myGraph")
-            
-        a.btn.btn-lg.btn-success(href='/monitor', role='button') Go back
-            
+        a.btn.btn-link(href='/monitor', role='button') Go back
             //each item in arrayPrice
                 p= item
             //each item in arrayDate 
                 p= item
         footer.footer
-            p © Price Monitor - A NodeJS Project of Luan Le - last updated Nov. 2023
+            p © Price Monitor - a NodeJS Project of Luan Le

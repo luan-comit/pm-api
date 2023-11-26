@@ -28,7 +28,7 @@ body {
   color: rgba(169, 169, 169, 0.842);
 }
 .graph-container{
-  width: 800px;
+  width: auto;
   height: auto;
   border: 1px black solid;
 }
@@ -85,6 +85,7 @@ body {
 
 .mytable td, th {
   border: 1px solid #ddd;
+  text-align: center;
   padding: 8px;
 }
 
@@ -95,7 +96,7 @@ body {
 .mytable th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   background-color: #4CAF50;
   color: white;
 }
@@ -293,8 +294,8 @@ a:hover>div { display: block; }
     background-color:cornflowerblue;
     color: white;
     text-align: center;
-    padding: 10px;
-    font-size: 1.2rem;
+    padding: 15px;
+    font-size: 1.5rem;
 }
 .email-btn:hover{
     color: rgb(236, 10, 29);

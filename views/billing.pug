@@ -3,20 +3,18 @@ include ./components/tables
 block contents  
     // Jumbotron
     .container
-        h3 Manage Billing     
-            a(href='./manageshop')
-                span    Shop
+        h3 Manage Billing Payment
         br
         //.jumbotron
         .table-responsive
-            table.table.table-striped
+            table.table-striped
                 thead
                     tr
-                        th #
-                        th Type
-                        th PaymentID
-                        th Amount(CAD)
-                        th Date
+                        th Payment Number
+                        th Payment Type
+                        th Payment ID
+                        th Amount (CAD)
+                        th Payment Date
                 tbody
                 each item in listItems
                     tr
@@ -27,4 +25,4 @@ block contents
                         td= item.create_time
     .container
         footer.footer
-            p © Price Monitor - A NodeJS Project of Luan Le - last updated Nov. 2023
+            p © Price Monitor - a NodeJS Project of Luan Le

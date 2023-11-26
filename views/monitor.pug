@@ -3,10 +3,9 @@ include ./components/tables
 block contents  
     // Jumbotron
     .container
-        h4 Your saved items list
-        hr
+        h3 Your saved items list
         .table-responsive
-              table.table.table-striped
+              table.table-striped
                 thead
                     tr
                         th #
@@ -19,7 +18,7 @@ block contents
                         th Remove Item
                         th Display Graph
                         th Update Graph
-                        th Add to Shop
+                        th Add item to Shop
 
                 tbody
                  each item in listItems
@@ -57,4 +56,4 @@ block contents
                                 button.btn-link(type="submit", name="update") Add_Shop
     .container
         footer.footer
-            p © Price Monitor - A NodeJS Project of Luan Le - last updated Nov. 2023
+            p © Price Monitor - a NodeJS Project of Luan Le

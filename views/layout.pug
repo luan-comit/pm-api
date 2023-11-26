@@ -40,12 +40,18 @@ block body
 						li
 							a(href='/manageshop') Manage Shop
 					if menu == 4
+						li.active
+							a(href='/managebilling') Billing
+					else
+						li
+							a(href='/managebilling') Billing
+					if menu == 5
 						li.active 
 							a(href='/contact') Contact
 					else
 						li
 							a(href='/contact') Contact
-					if menu == 5
+					if menu == 6
 						li.active
 							if logged 
 								form(action='/logout', method='POST') 
