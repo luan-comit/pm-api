@@ -75,7 +75,7 @@ app.use(
 
 app.listen(port, err => {
     if(err) throw err;
-    console.log(`%c Server running on port: ${port}`, "color: green");
+    console.log(`%c Server running at http://localhost:${port}`, "color: green");
 });
 
 
@@ -334,14 +334,14 @@ app.get("/displaygraph", function (req, res) {
   res.render("graph")
 })
 
-app.post("/displaygraph", function (req, res) {
+app.post("/displaygraph", isAuth, function (req, res) {
   //res.json(req.body);
   mongoClient.connect(_mongoUrl, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err
     var dbo = db.db(_db)
     dbo
       .collection(_itemsGraphCollection)
-      .findOne({ url: req.body.url }, function (err, record) {
+      .findOne({ url: req.body.url, email: req.session.email }, function (err, record) {
         if (err) {
           throw err
         } else {
@@ -406,11 +406,13 @@ app.post("/displaygraph", function (req, res) {
                 }
               }
               res.render("graph", {
-                menu: 2,
+                menu: 3,
                 arrayPrice: arrayPrice,
                 arrayDate: arrayDate,
                 graphLabel: graphLabel,
                 graphUrl: graphUrl,
+                logged: req.session.isAuth,
+                email: req.session.email,        
               })
               //res.json(arrayPriceDate);
               // console.log("User::::::", req.session.email, '\n', arrayPrice, '\n', arrayDate);
@@ -541,7 +543,7 @@ app.post("/updatePriceDate", function (req, res) {
         if (err) throw err
         var dbo = db.db(_db)
         dbo.collection(_itemsGraphCollection).updateOne(
-          { url: req.body.url },
+          { url: req.body.url, email: req.session.email },
           {
             $push: {
               price_date_Arr: {
@@ -573,9 +575,9 @@ app.post("/updatePriceDate", function (req, res) {
       var [el4] = await pageXpath.$x(_category.attr_xpath.price)
       var price = await el4.getProperty("textContent")
       price = await price.jsonValue()
-      var test = price.toString().replace(/ |$|[a-z]|[A-Z]/g, "")
+      var formattedPrice = price.toString().replace(/ |$|[a-z]|[A-Z]/g, "")
 
-      itemUpdate.price = test
+      itemUpdate.price = formattedPrice
       console.log("Price Date got:::::", itemUpdate)
       updatePriceDateMongoDB()
     } catch (error) {

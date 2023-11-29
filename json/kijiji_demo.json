@@ -1,35 +1,31 @@
 {
-  "url": "https://www.kijiji.ca/v-classic-cars/calgary/1968-chevelle-ss/1677421202",
-  "date": 1632713511956,
+  "url": "https://www.amazon.com/Honeywell-Programmable-Touch-Screen-Thermostat/dp/B07FKPFPGG/?_encoding=UTF8&_encoding=UTF8&ref_=dlx_deals_sc_dcl_img_dt_dealz_tdwdg&pd_rd_w=ZyCYX&content-id=amzn1.sym.c26b7338-5e3a-456b-beed-4874125bbb87&pf_rd_p=c26b7338-5e3a-456b-beed-4874125bbb87&pf_rd_r=TDM97A1FDY30SX0AFGMC&pd_rd_wg=gC9rN&pd_rd_r=74f244bd-82bb-4c31-ab17-a77b1c23dedc",
+  "date": 1700117603849,
   "email": "luanlvt@yahoo.com",
-  "category": "Kijiji Classic Car",
-  "img_src": "https://media.kijiji.ca/api/v1/ca-prod-fsbo-ads/images/b1/b1f05058-394e-416d-8386-95cce140f78b?rule=kijijica-640-webp",
-  "title": "1968 Chevelle SS",
-  "price": "$110,900",
-  "address": "Alberta, AB R4J1B6",
+  "category": "Amazon HotDeal",
+  "img_src": "https://m.media-amazon.com/images/I/61AJJFBNF5S._AC_SX450_.jpg",
+  "title": "::: Demo record ::: Honeywell Home RTH8560D 7 Day Programmable Touchscreen Thermostat White",
+  "price": "62",
+  "price_list": "$91.00",
   "price_date_Arr": [
     {
-      "price": "$110,900",
+      "price": "$110",
       "date": 1621820474761
     },
     {
-      "price": "$100,900",
+      "price": "$100",
       "date": 1625101141695
     },
     {
-      "price": "$90,900",
+      "price": "$91",
       "date": 1625146573219
     },
     {
-      "price": "$80,900",
-      "date": 1625160896256
-    },
-    {
-      "price": "$80,900",
+      "price": "$80",
       "date": 1625349557299
     },
     {
-      "price": "$80,900",
+      "price": "$62",
       "date": 1625526258861
     }
   ]
