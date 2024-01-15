@@ -25,7 +25,7 @@ COPY . /app
 RUN npm install
 
 # Open port for node
-EXPOSE 8000
+EXPOSE 80
 
 # Define the entry point for the container
 CMD ["npm", "start"]
