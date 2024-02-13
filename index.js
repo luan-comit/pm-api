@@ -689,11 +689,13 @@ app.post("/fetch", async function (req, res) {
       })
       break
     default:
-      res.render("message", {
-        msgID: 1,
-        message:
-          "Category is not available yet. Go back and chose another category",
+      res.render("fetch", {
         menu: 1,
+        linkItems: await fetch_funcs.getLinkItems(
+          bestbuyDrone,
+          count,
+          category='Bestbuy Drone'
+        ),
         logged: req.session.isAuth,
         email: req.session.email,
       })
@@ -777,14 +779,7 @@ app.post("/saveItem", isAuth, function (req, res) {
         saveFetchedItem(kijijiLaptop)
         break
       default:
-        res.render("message", {
-          msgID: 1,
-          message:
-            "Category is not available yet. Go back and chose another category",
-          menu: 1,
-          logged: req.session.isAuth,
-          email: req.session.email,
-        })
+        saveFetchedItem(bestbuyDrone)
     }
     res.render("message", {
       msgID: 1,
